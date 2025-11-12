@@ -5,7 +5,6 @@ $titulo = "Contador de letras 'a'";
 $info = "Ingresa una palabra y contaremos cuántas letras 'a' minúscula contiene.";
 ?>
 
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -24,14 +23,14 @@ $info = "Ingresa una palabra y contaremos cuántas letras 'a' minúscula contien
     </form>
 
     <?php
-    // Procesar la entrada usando método GET
+    
     if (isset($_GET["enviar"])) {
         $palabra = isset($_GET["palabra"]) ? trim($_GET["palabra"]) : "";
 
         if ($palabra === "") {
             echo "<p>Por favor ingresa una palabra.</p>";
         } else {
-            // Contar las letras 'a' minúsculas usando substr_count
+            
             $cantidad = substr_count($palabra, 'a');
             
             echo "<h2>Resultado:</h2>";
@@ -41,5 +40,6 @@ $info = "Ingresa una palabra y contaremos cuántas letras 'a' minúscula contien
     }
     ?>
 </body>
+
 
 </html>
